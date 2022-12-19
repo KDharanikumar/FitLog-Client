@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  list-style: none;
+  font-family: "Poppins";
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.w-30 {
+  width: 80%;
+}
+.box-w {
+  width: 20em;
+  border: 2px solid;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.bg-banner {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5844961c44024382e467cee4/1492632509702-RIXSQ91HLD8TCW94ABG7/mobile-fitness-bg.jpg");
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+.form-control {
+  border-color: #000000;
+}
+
+/****************************************************************BUTTON****************************************************************/
+
+.fl-button {
+  background-color: #087d92;
+  color: #fff;
+  border-radius: 3px;
+  border: none;
+  text-align: center;
+  height: 40px;
+  width: 150px;
+}
+
+/************************************************************BANNER************************************************************/
+
+.fl-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fl-page-title {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+}
+.fl-banner img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+.center-fix {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+.form-control:focus {
+  border-color: #000000;
+  box-shadow: none;
+}
+.fl-box-shadow {
+  box-shadow: 0px -2px 15px #878484;
+}
+
+/*************************************************************MENU*************************************************************/
+
+.logo {
+  width: 20%;
+  margin: 0;
+}
+
+.navbar-collapse ul li {
+  margin-right: 40px;
+}
+
+/*************************************************************HOME*************************************************************/
+
+.fl-homebanner-text {
+  color: #fff;
+}
+
+.fl-testmonial h1 {
+  font-size: 54px;
+  font-weight: 700;
+}
+
+.testmonial-img img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+/****************************************************************PRICING****************************************************************/
+
+.fl-pricing-card {
+  width: 350px;
+  margin: auto;
+}
+
+.fl-pricing-plan {
+  width: 60px;
+  height: 30px;
+  background-color: #0faac7;
+  border-radius: 0px 0px 5px 5px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.fl-pricing-card h1 {
+  color: #24c385;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.fl-pricing-card-spec li {
+  margin-bottom: 20px;
+  font-size: large;
+}
+
+/**************************************************************ABOUT US**************************************************************/
+
+.fl-about-content h3 {
+  color: #1693ab;
+  font-size: 24px;
+  font-weight: bold;
+}
+.fl-about-content h1 {
+  font-weight: bolder;
+  font-size: 60px;
+  margin-bottom: 25px;
+}
+.fl-about-content p {
+  text-align: justify;
+}
+
+.fl-aboutus-img img {
+  width: 320px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px;
+}
+
+/**************************************************************SERVICES***************************************************************/
+
+.fl-service-card {
+  width: 260px;
+  height: 330px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: #fff;
+}
+
+.fl-service-card:hover {
+  background-color: #091664;
+  color: #fff;
+}
+.fl-service-card:hover > .fl-contact-icon {
+  color: #e10d7a;
+}
+
+.fl-service-link {
+  text-decoration: none;
+  color: black;
+}
+
+.fl-service-card img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #d5f4f9;
+  margin-bottom: 20px;
+}
+
+.service-icon {
+  font-size: xx-large;
+  color: #0faac7;
+}
+
+/****************************************************************TEAM****************************************************************/
+
+.fl-team-card {
+  width: 250px;
+  height: 330px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: #fff;
+}
+
+.fl-team-card h6 {
+  color: #0faac7;
+  font-weight: bold;
+}
+
+.fl-team-member {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fl-team-member:hover {
+  transform: scale3d(1.1, 1.1, 1);
+  transition: transform 1s ease-in-out;
+}
+
+/**************************************************************CALCULATOR**************************************************************/
+
+.fl-calculator-card {
+  width: 280px;
+  height: 400px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: #fff;
+}
+.img {
+  width: 40%;
+  border-radius: 20px;
+}
+.bmi-val {
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.calc-bg {
+  padding: 50px;
+}
+
+/************************************************************CALCULATION PAGE***********************************************************/
+.bmr-cal-gen {
+  width: 100px;
+  height: 45px;
+}
+
+.line {
+  margin-left: 40px;
+  border-left: 1px solid black;
+  height: 500px;
+}
+
+.bmr-value-dash {
+  width: 150px;
+  border-top: 2px solid black;
+  margin-right: 15px;
+  align-items: baseline;
+}
+/*************************************************************CONTACT*************************************************************/
+
+.fl-contact-addresscard {
+  height: 250px;
+  width: 350px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: #fff;
+  /* margin: 10px; */
+}
+
+.fl-contact-addresscard:hover {
+  background-color: #091664;
+  transition: 0.8s;
+  color: #fff;
+}
+
+.fl-contact-icon {
+  color: #0faac7;
+}
+
+.fl-contact-form input,
+textarea {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+input {
+  height: 50px;
+  border: 1px solid #a8a3a3;
+}
+
+textarea {
+  height: 150px;
+  border: 1px solid #a8a3a3;
+}
+
+/****************************************************************SIGN IN****************************************************************/
+
+.fl-signin h1 {
+  color: #05dbf2;
+}
+
+.fl-signin-card {
+  width: 400px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: #fff;
+}
+
+/****************************************************************SIGN UP****************************************************************/
+
+.fl-signup h1 {
+  color: #1693ab;
+}
+
+.fl-signup-card {
+  margin: auto;
+  width: 400px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: #fff;
+}
+
+/*************************************************************FORGOT PASSWORD***********************************************************/
+
+.fl-forgotpassword h1 {
+  color: #1693ab;
+}
+.fl-forgotpassword-card {
+  margin: auto;
+  width: 350px;
+  padding: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: #fff;
+}
+
+/***************************************************************FOOTER***************************************************************/
+.footer {
+  background-color: #092328;
+  color: white;
+  padding: 15px;
+  bottom: 0;
+}
+
+.fullscreen {
+  height: 100vh;
+  min-height: 100%;
+}
