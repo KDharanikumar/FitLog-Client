@@ -1,84 +1,117 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import BannerImg from "../Components/BannerImg";
-import bmr from "../Images/bmr.jpg";
-import bodyfat from "../Images/bodyfat.jpg";
-import macros from "../Images/macros.jpg";
-import rm from "../Images/rm.jpg";
 
-const Calculators = () => {
+const CalculationPages = () => {
+  // Bmi Formula
+  // weight(kg)/height(m*m)
+  // let weight = 80
+  // let height = 180/100
+  // result = weight/height*height
+  const [weight, setWeight] = useState("");
+  const [height, setHeight] = useState("");
+  const [bmi, setBmi] = useState(0);
+  const [message, setMessage] = useState("");
+
+  let calculatebmi = (event) => {
+    event.preventDefault();
+    if (weight <= 0 || height <= 0) {
+      alert("Please Enter Valid Height & Weight");
+    } else {
+      let bmi = weight / ((height * height) / 10000);
+      setBmi(bmi.toFixed(1));
+
+      // Messages
+      if (bmi < 18) {
+        setMessage("You Are Underweight");
+      } else if (bmi >= 18 && bmi < 25) {
+        setMessage("You Are Healthy");
+      } else {
+        setMessage("You Are Overweight");
+      }
+    }
+  };
+  console.log(bmi);
+
+  let imgsrc;
+
+  if (bmi < 1) {
+    imgsrc = require("../Images/bmicalc.webp");
+  } else {
+    if (bmi < 18) {
+      imgsrc = require("../Images/Underweight.jpg");
+    } else if (bmi >= 18 && bmi < 25) {
+      imgsrc = require("../Images/Healthy.webp");
+    } else if (bmi > 25) {
+      imgsrc = require("../Images/Overweight.png");
+    } else {
+      imgsrc = require("../Images/bmicalc.webp");
+    }
+  }
+
+  let Reload = () => {
+    window.location.reload();
+  };
+
   return (
     <section>
-      <section>
-        <BannerImg title="CALCULATORS" />
-      </section>
-      <div className="container fl-calculator p-5">
-        <div className="row text-center">
-          <div>
-            <h1>Track your progress</h1>
-            <p>Use our free fitness tools & trackers to take your journey to the next level!</p>
-          </div>
-        </div>
+      <div>
+        <BannerImg title="BMI CALCULATOR" />
+      </div>
+      <h1 className="my-5 text-center">Track your progress</h1>
+      <div className="container fl-calculator my-5 px-5">
+        <div className="row">
+          <div className="col-md-4 text-center">
+            <h3 className="mb-4">
+              <u>INPUT</u>
+            </h3>
+            <form onSubmit={calculatebmi}>
+              <div className="mb-3">
+                <label for="weight" className="form-label">
+                  WEIGHT
+                </label>
+                <input
+                  type="number"
+                  className="form-control"
+                  value={weight}
+                  onChange={(e) => setWeight(e.target.value)}
+                  id="weight"
+                />
+              </div>
 
-        <div className="row d-flex justify-content-center gap-4 my-5">
-          <div class="card fl-calculator-card">
-            <div class="card-body">
-              <img src={bmr} class="card-img-top" alt="Bmr" />
-              <h5 class="card-title">BMR Calculator</h5>
-              <p class="card-text">
-                Your basal metabolic rate (BMR) is the number of calories your body needs to sustain itself if you do
-                absolutely nothing all day.
-              </p>
-              <Link to="/bmi-calculator">
-                <button className="fl-button">Calculate Now</button>
-              </Link>
-            </div>
-          </div>
+              <div className="mb-4">
+                <label for="height" className="form-label">
+                  HEIGHT
+                </label>
+                <input
+                  type="number"
+                  className="form-control"
+                  value={height}
+                  onChange={(e) => setHeight(e.target.value)}
+                  id="height"
+                />
+              </div>
 
-          <div class="card fl-calculator-card">
-            <div class="card-body">
-              <img src={macros} class="card-img-top" alt="Bmr" />
-              <h5 class="card-title">Macro Calculator</h5>
-              <p class="card-text">
-                Macronutrients are the nutrients that your body needs in large quantities—including fats, proteins,
-                carbs, water and fibre.
-              </p>
-              <Link to="/bmi-calculator">
-                <button className="fl-button">Calculate Now</button>
-              </Link>
-            </div>
+              <button type="submit" className="fl-button mb-3 w-100">
+                SUBMIT
+              </button>
+              <button className="fl-button w-100 mb-3" onClick={Reload}>
+                RELOAD
+              </button>
+            </form>
           </div>
-
-          <div class="card fl-calculator-card">
-            <div class="card-body">
-              <img src={rm} class="card-img-top" alt="Bmr" />
-              <h5 class="card-title">1 Rep Max Calculator</h5>
-              <p class="card-text">
-                1 Rep Max (1RM) is the maximum weight that can be lifted in a specific exercise in 1 repetition... This
-                determines your strength level for that exercise.
-              </p>
-              <Link to="/bmi-calculator">
-                <button className="fl-button">Calculate Now</button>
-              </Link>
-            </div>
-          </div>
-
-          <div class="card fl-calculator-card">
-            <div class="card-body">
-              <img src={bodyfat} class="card-img-top" alt="Bmr" />
-              <h5 class="card-title">Body Fat % Calculator</h5>
-              <p class="card-text">
-                Body fat percentage is a key indicator of good health. A high body fat % might put you at a greater risk
-                of lifestyle diseases.
-              </p>
-              <Link to="/bmi-calculator">
-                <button className="fl-button">Calculate Now</button>
-              </Link>
-            </div>
+          <div className="col-md-8 text-center calculation-result">
+            <h3 className="mb-4">
+              <u>RESULTS</u>
+            </h3>
+            <p className="mb-3">Fill the required details and your results will appear here!</p>
+            <h5>Your BMI is</h5>
+            <h4>{bmi}</h4>
+            <img src={imgsrc} alt="img"></img>
+            <p className="bmi-msg">{message}</p>
           </div>
         </div>
       </div>
     </section>
   );
 };
-
-export default Calculators;
+export default CalculationPages;

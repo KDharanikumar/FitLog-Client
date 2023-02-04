@@ -4,17 +4,13 @@ import "./App.css";
 import Footer from "./Components/Footer";
 
 const App = () => {
-	return (
-		<section className="fullscreen">
-			<section className="">
-				<Menu />
-				<Navigation />
-				<div>
-					<Footer />
-				</div>
-			</section>
-		</section>
-	);
+  return (
+    <section className="App">
+      <Menu />
+      <Navigation />
+      <Footer />
+    </section>
+  );
 };
 
 export default App;

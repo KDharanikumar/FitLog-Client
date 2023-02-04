@@ -1,39 +1,26 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import BannerImg from "../Components/BannerImg";
+import Teams from "../Data/TeamData.json";
 
 const Team = () => {
-	const [testm, settestm] = useState([]);
-
-	useEffect(() => {
-		testData();
-	}, []);
-
-	const testData = async () => {
-		const response = await axios.get("https://testimonialapi.toolcarton.com/api");
-
-		settestm(response.data);
-	};
-	return (
-		<section>
-			<BannerImg title="TEAM" />
-			<div className="container">
-				<div className="row justify-content-center gap-4 p-5">
-					{testm.slice(0, 8).map((tm) => {
-						return (
-							<div class="card fl-team-card text-center py-2" key={tm.id}>
-								<div class="card-body">
-									<img src={tm.avatar} alt="team-img" className="fl-team-member mb-4"></img>
-									<h5 className="fw-bold">{tm.name}</h5>
-									<h6>{tm.designation}</h6>
-								</div>
-							</div>
-						);
-					})}
-				</div>
-			</div>
-		</section>
-	);
+  return (
+    <section>
+      <BannerImg title="SERVICES" />
+      <div className="container fl-services">
+        <div className="row d-flex justify-content-center gap-5">
+          {Teams.map((data) => (
+            <div class="card fl-team-card text-center p-2">
+              <div class="card-body">
+                <img src={data.avatar} alt="contact-img" className="mb-4"></img>
+                <h5 className="mb-3">{data.name}</h5>
+                <p className="mb-0">{data.designation}</p>
+                <p>{data.location}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Team;

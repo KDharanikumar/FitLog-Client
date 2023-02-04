@@ -8,7 +8,21 @@
 a {
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 50px 20px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .w-30 {
@@ -45,47 +59,20 @@ a {
 .fl-button {
   background-color: #087d92;
   color: #fff;
-  border-radius: 3px;
+  padding: 8px;
   border: none;
   text-align: center;
-  height: 40px;
-  width: 150px;
+  height: fit-content;
+  width: fit-content;
+  font-weight: 400;
 }
 
 /************************************************************BANNER************************************************************/
 
-.fl-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fl-page-title {
-  font-size: 3rem;
+.fl-banner-title {
+  font-size: 2.5rem;
   color: #fff;
   font-weight: 700;
-}
-.fl-banner img {
-  height: 400px;
-  width: 100%;
-  object-fit: cover;
-}
-.center-fix {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  min-height: 100%;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  display: none;
-}
-.form-control:focus {
-  border-color: #000000;
-  box-shadow: none;
-}
-.fl-box-shadow {
-  box-shadow: 0px -2px 15px #878484;
 }
 
 /*************************************************************MENU*************************************************************/
@@ -93,10 +80,6 @@ input::-webkit-inner-spin-button {
 .logo {
   width: 20%;
   margin: 0;
-}
-
-.navbar-collapse ul li {
-  margin-right: 40px;
 }
 
 /*************************************************************HOME*************************************************************/
@@ -160,8 +143,8 @@ input::-webkit-inner-spin-button {
 }
 
 .fl-aboutus-img img {
-  width: 320px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   box-shadow: 0px 2px 6px;
 }
@@ -169,23 +152,15 @@ input::-webkit-inner-spin-button {
 /**************************************************************SERVICES***************************************************************/
 
 .fl-service-card {
-  width: 260px;
-  height: 330px;
+  width: 240px;
+  height: 300px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: #fff;
 }
 
 .fl-service-card:hover {
-  background-color: #091664;
   color: #fff;
-}
-.fl-service-card:hover > .fl-contact-icon {
-  color: #e10d7a;
-}
-
-.fl-service-link {
-  text-decoration: none;
-  color: black;
+  background-color: #05dbf2;
 }
 
 .fl-service-card img {
@@ -197,94 +172,93 @@ input::-webkit-inner-spin-button {
   margin-bottom: 20px;
 }
 
-.service-icon {
-  font-size: xx-large;
-  color: #0faac7;
-}
-
 /****************************************************************TEAM****************************************************************/
 
 .fl-team-card {
   width: 250px;
-  height: 330px;
+  height: 350px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: #fff;
 }
 
-.fl-team-card h6 {
+.fl-team-card h5 {
   color: #0faac7;
   font-weight: bold;
 }
 
-.fl-team-member {
-  height: 200px;
-  width: 200px;
+.fl-team-card img {
+  height: 180px;
+  width: 180px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.fl-team-member:hover {
+.fl-team-card img:hover {
   transform: scale3d(1.1, 1.1, 1);
   transition: transform 1s ease-in-out;
 }
 
-/**************************************************************CALCULATOR**************************************************************/
-
-.fl-calculator-card {
-  width: 280px;
-  height: 400px;
+/************************************************************CALCULATOR***********************************************************/
+.fl-calculator {
+  padding-top: 50px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: #fff;
 }
-.img {
-  width: 40%;
-  border-radius: 20px;
-}
-.bmi-val {
+
+.fl-calculator .form-label {
+  font-size: 24px;
   font-weight: 800;
-  font-size: 50px;
 }
 
-.calc-bg {
-  padding: 50px;
+.fl-calculator h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0faac7;
 }
 
-/************************************************************CALCULATION PAGE***********************************************************/
-.bmr-cal-gen {
-  width: 100px;
-  height: 45px;
+.calculation-result h4 {
+  font-size: 46px;
+  font-weight: 800;
+  color: #0faac7;
 }
 
-.line {
-  margin-left: 40px;
-  border-left: 1px solid black;
-  height: 500px;
+.calculation-result h5 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #000000;
 }
 
-.bmr-value-dash {
-  width: 150px;
-  border-top: 2px solid black;
-  margin-right: 15px;
-  align-items: baseline;
+.calculation-result img {
+  height: 250px;
+  width: 250px;
+  margin-bottom: 30px;
 }
+
+.calculation-result .bmi-msg {
+  font-size: 26px;
+  font-weight: 600;
+  color: #f90303;
+}
+
 /*************************************************************CONTACT*************************************************************/
 
 .fl-contact-addresscard {
-  height: 250px;
-  width: 350px;
+  height: 200px;
+  width: 300px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: #fff;
-  /* margin: 10px; */
 }
 
-.fl-contact-addresscard:hover {
-  background-color: #091664;
-  transition: 0.8s;
-  color: #fff;
+.fl-contact-addresscard icon {
+  color: #05dbf2;
+  font-size: 42px;
+  font-weight: 800;
 }
 
-.fl-contact-icon {
-  color: #0faac7;
+.map iframe {
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
 }
 
 .fl-contact-form input,
@@ -300,6 +274,11 @@ input {
 textarea {
   height: 150px;
   border: 1px solid #a8a3a3;
+}
+
+.form-control:focus {
+  border-color: #000000;
+  box-shadow: none;
 }
 
 /****************************************************************SIGN IN****************************************************************/
