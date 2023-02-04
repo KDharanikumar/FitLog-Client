@@ -5,7 +5,8 @@ const Team = () => {
   return (
     <section>
       <BannerImg title="SERVICES" />
-      <div className="container fl-services">
+      <div className="container fl-services py-5">
+        <h1 className="page-topic text-center mb-5">OUR TEAMS</h1>
         <div className="row d-flex justify-content-center gap-5">
           {Teams.map((data) => (
             <div class="card fl-team-card text-center p-2">

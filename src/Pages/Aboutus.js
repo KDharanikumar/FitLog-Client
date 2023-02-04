@@ -6,10 +6,10 @@ const Aboutus = () => {
     <section>
       <BannerImg title="ABOUT" />
       <div className="container fl-about-content">
+        <h1 className="page-topic text-center my-5">ABOUT US</h1>
         <div className="row">
           <div className="col-md-6 p-4">
-            <h3>ABOUT US</h3>
-            <h1>We Help To Get Fitness Goal</h1>
+            <h2>We Help To Get Fitness Goal</h2>
             <p>
               I appreciate your coaching center really good environment and excellent student training. You are
               continuously handle student training wonderfully. Thanks for your great service. I appreciate your

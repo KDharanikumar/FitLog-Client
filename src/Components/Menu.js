@@ -8,7 +8,7 @@ const Menu = () => {
         <ul className="logo">
           <li>
             <Link to="/">
-              <img src={logo} alt="" className="w-30" />
+              <img src={logo} alt="logo" className="logo" />
             </Link>
           </li>
         </ul>

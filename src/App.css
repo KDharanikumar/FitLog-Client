@@ -16,42 +16,15 @@ a {
   padding: 0;
 }
 
-.container {
-  padding: 50px 20px;
-}
-
 h5 {
   font-size: 20px;
   font-weight: 700;
 }
 
-.w-30 {
-  width: 80%;
-}
-.box-w {
-  width: 20em;
-  border: 2px solid;
-  border-radius: 20px;
-  margin: 10px;
-  padding: 15px;
-}
-
-.bg-banner {
-  background-image: url("https://images.squarespace-cdn.com/content/v1/5844961c44024382e467cee4/1492632509702-RIXSQ91HLD8TCW94ABG7/mobile-fitness-bg.jpg");
-  height: 450px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.banner-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 450px;
-}
-.form-control {
-  border-color: #000000;
+h1 {
+  color: #0faac7;
+  font-size: 38px;
+  font-weight: 800;
 }
 
 /****************************************************************BUTTON****************************************************************/
@@ -67,12 +40,29 @@ h5 {
   font-weight: 400;
 }
 
-/************************************************************BANNER************************************************************/
+/****************************************************************BANNER****************************************************************/
 
-.fl-banner-title {
-  font-size: 2.5rem;
-  color: #fff;
-  font-weight: 700;
+.bg-banner {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5844961c44024382e467cee4/1492632509702-RIXSQ91HLD8TCW94ABG7/mobile-fitness-bg.jpg");
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+
+.home-banner {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5844961c44024382e467cee4/1492632509702-RIXSQ91HLD8TCW94ABG7/mobile-fitness-bg.jpg");
+  height: 650px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 /*************************************************************MENU*************************************************************/
@@ -82,7 +72,49 @@ h5 {
   margin: 0;
 }
 
-/*************************************************************HOME*************************************************************/
+/************************************************************HOME************************************************************/
+
+.fl-home .bg-banner {
+  height: 600px;
+}
+
+.fl-homebanner-text h2 {
+  font-size: 52px;
+  font-weight: 800;
+}
+
+.fl-homebanner-text h3 {
+  /* color: #05dbf2; */
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.fl-banner-title {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.client-say img {
+  height: 100px;
+  width: 100px;
+}
+
+.client-say h5 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.client-say p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.client-say {
+  width: 350px;
+}
+
+/*************************************************************TESTIMONIAL*************************************************************/
 
 .fl-homebanner-text {
   color: #fff;
@@ -99,31 +131,10 @@ h5 {
   border-radius: 50%;
 }
 
-/****************************************************************PRICING****************************************************************/
+/*************************************************************TESTIMONIAL*************************************************************/
 
 .fl-pricing-card {
-  width: 350px;
-  margin: auto;
-}
-
-.fl-pricing-plan {
-  width: 60px;
-  height: 30px;
-  background-color: #0faac7;
-  border-radius: 0px 0px 5px 5px;
-  color: #fff;
-  font-weight: 600;
-}
-
-.fl-pricing-card h1 {
-  color: #24c385;
-  font-weight: 700;
-  font-size: 4rem;
-}
-
-.fl-pricing-card-spec li {
-  margin-bottom: 20px;
-  font-size: large;
+  width: 320px;
 }
 
 /**************************************************************ABOUT US**************************************************************/
@@ -133,7 +144,7 @@ h5 {
   font-size: 24px;
   font-weight: bold;
 }
-.fl-about-content h1 {
+.fl-about-content h2 {
   font-weight: bolder;
   font-size: 60px;
   margin-bottom: 25px;

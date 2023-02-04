@@ -1,105 +1,121 @@
-// import StarIcon from "@mui/icons-material/Star";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import Testimonial from "../Components/Testimonial";
+import Service from "../Data/Services.json";
+import Teams from "../Data/TeamData.json";
 
 const Home = () => {
-  const [testm, settestm] = useState([]);
-
-  useEffect(() => {
-    const testData = async () => {
-      const response = await axios.get("https://testimonialapi.toolcarton.com/api");
-      settestm(response.data);
-    };
-    testData();
-  }, []);
-
   return (
     <section>
-      <div className="container-fluid fl-home bg-banner">
-        <div className="row banner-center">
+      {/* HOME BANNER START */}
+      <div className="container-fluid home-banner d-flex justify-content-center align-items-center">
+        <div className="row">
           <div className="fl-homebanner-text text-center">
             <h3>YOUR HEALTH COACH</h3>
-            <h1 className="fl-homepage-title">We Stay Fit With Our Best Coach</h1>
-            <p>
+            <h2>We Stay Fit With Our Best Coach</h2>
+            {/* <p>
               Whether your aim is to loose weight, tone up, gain weight we can put together a gym programme or recommend
               the right classes for you to attend in our studios.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
-
-      <h1 className="text-center fw-bold my-4">OUR PRICING PLANS</h1>
-
-      <div className="container fl-pricing">
-        <div className="row">
-          {/*  */}
-
-          <div className="col-md-6">
-            <div class="card fl-pricing-card text-center my-3">
-              <div className="fl-pricing-plan m-auto">Free</div>
-              <div class="card-body">
-                <h1 className="fl-pricing-value">
-                  $0
-                  <span className="fs-5" style={{ color: "black" }}>
-                    /Month
-                  </span>
-                </h1>
-                <p className="my-4">A good choice when working remotely With Your Clients</p>
-                <hr className=""></hr>
-                <ul className="fl-pricing-card-spec p-0">
-                  <li>Review Your Question</li>
-                  <li>Work with Resources</li>
-                  <li>Analysis of Your "I Have"</li>
-                  <li>Analysis of Your "I Have"</li>
-                  <li>Support & Mentoring</li>
-                </ul>
-                <button class="fl-button mb-2">CHOOSE PLAN</button>
-              </div>
-            </div>
-          </div>
-
-          {/*  */}
-
-          <div className="col-md-6">
-            <div class="card fl-pricing-card text-center my-3">
-              <div className="fl-pricing-plan m-auto">Pro</div>
-              <div class="card-body">
-                <h1 className="fl-pricing-value">
-                  $10
-                  <span className="fs-5" style={{ color: "black" }}>
-                    /Month
-                  </span>
-                </h1>
-                <p className="my-4">A good choice when working remotely With Your Clients</p>
-                <hr className=""></hr>
-                <ul className="fl-pricing-card-spec p-0">
-                  <li>Review Your Question</li>
-                  <li>Work with Resources</li>
-                  <li>Analysis of Your "I Have"</li>
-                  <li>Analysis of Your "I Have"</li>
-                  <li>Support & Mentoring</li>
-                </ul>
-                <button class="fl-button mb-2">CHOOSE PLAN</button>
-              </div>
-            </div>
-          </div>
-
-          {/*  */}
-        </div>
-      </div>
-
-      <section className="container-fluid" style={{ backgroundColor: "#CFF2F8" }}>
-        <div className="container fl-testmonial my-5 py-5" style={{ backgroundColor: "#CFF2F8" }}>
+      {/* HOME BANNER END */}
+      {/* TESTIMONIAL START */}
+      <div className="container-fluid" style={{ backgroundColor: "#CFF2F8" }}>
+        <div className="container fl-testmonial py-5" style={{ backgroundColor: "#CFF2F8" }}>
           <div className="row text-center">
-            <div className="mb-3">
-              <h5 className="mb-3 fw-bold">TESTIMONIAL</h5>
-              <h1>What Client Say's</h1>
+            <h5 className="mb-3 fw-bold">TESTIMONIAL</h5>
+            <h1 className="mb-5">What Client Say's</h1>
+
+            <div className="mb-3 d-flex flex-wrap align-items-center justify-content-center gap-3">
+              {Teams.slice(0, 3).map((data) => (
+                <div className="card client-say">
+                  <div className="card-body">
+                    <img src={data.avatar} alt="contact-img" className="mb-4"></img>
+                    <h5>{data.name}</h5>
+                    <p className="mb-0">{data.designation}</p>
+                    <p>{data.location}</p>
+                    <p>{data.message}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <Testimonial testm={testm} />
           </div>
         </div>
-      </section>
+      </div>
+      {/* TESTIMONIAL END */}
+      {/* HOME SERVICES START */}
+      <div className="container fl-services py-5">
+        <h1 className="page-topic text-center mb-5">OUR SERVICES</h1>
+        <div className="row d-flex justify-content-center gap-5">
+          {Service.map((data) => (
+            <div class="card fl-service-card text-center p-2">
+              <div class="card-body">
+                <img src={data.logo} alt="contact-img" className="mb-4"></img>
+                <h5>{data.name}</h5>
+                <p>{data.descrip}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* HOME SERVICES END */}
+      <div className="container fl-pricing py-5">
+        <h1 className="page-topic text-center mb-5">OUR PRICING</h1>
+        <div className="row d-flex justify-content-center gap-5">
+          <div class="card fl-pricing-card text-center p-2">
+            <div class="card-body">
+              <h6>
+                <u>BASIC</u>
+              </h6>
+              <h6>
+                $10<span>/Month</span>
+              </h6>
+              <ul>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card fl-pricing-card text-center p-2">
+            <div class="card-body">
+              <h6>
+                <u>BASIC</u>
+              </h6>
+              <h6>
+                $10<span>/Month</span>
+              </h6>
+              <ul>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card fl-pricing-card text-center p-2">
+            <div class="card-body">
+              <h6>
+                <u>BASIC</u>
+              </h6>
+              <h6>
+                $10<span>/Month</span>
+              </h6>
+              <ul>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+                <li>Review Your Question</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
