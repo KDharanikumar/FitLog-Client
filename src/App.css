@@ -22,7 +22,7 @@ h5 {
 }
 
 h1 {
-  color: #0faac7;
+  color: #1693ab;
   font-size: 38px;
   font-weight: 800;
 }
@@ -58,18 +58,75 @@ h1 {
 }
 
 .home-banner {
-  background-image: url("https://images.squarespace-cdn.com/content/v1/5844961c44024382e467cee4/1492632509702-RIXSQ91HLD8TCW94ABG7/mobile-fitness-bg.jpg");
+  background-image: url("https://images.pexels.com/photos/2247179/pexels-photo-2247179.jpeg?auto=compress&cs=tinysrgb&w=600");
   height: 650px;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   background-position: center center;
+}
+
+.fl-homebanner-text {
+  width: 100%;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  overflow: hidden;
+}
+
+.home-bottom-banner {
+  background-image: url("./Images/pic1-9.jpg");
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+}
+
+.home-bottom-banner h1 {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  overflow: hidden;
 }
 
 /*************************************************************MENU*************************************************************/
 
-.logo {
-  width: 20%;
-  margin: 0;
+.navbar-brand img {
+  height: 60px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.navbar-nav li {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-item .nav-link {
+  color: #087d92;
 }
 
 /************************************************************HOME************************************************************/
@@ -131,17 +188,43 @@ h1 {
   border-radius: 50%;
 }
 
-/*************************************************************TESTIMONIAL*************************************************************/
+/*************************************************************PRICING*************************************************************/
 
 .fl-pricing-card {
-  width: 320px;
+  width: 330px;
+  text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: #fff;
+}
+
+.fl-pricing-card ul li {
+  margin-bottom: 20px;
+}
+
+.fl-pricing-card h6 {
+  color: #087d92;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.fl-pricing-card h4 {
+  color: #0ef494;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.fl-pricing-card h4 span {
+  color: #000000;
+  font-size: 20px;
 }
 
 /**************************************************************ABOUT US**************************************************************/
 
-.fl-about-content h3 {
+.fl-about-content h6 {
   color: #1693ab;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
 }
 .fl-about-content h2 {
@@ -295,7 +378,7 @@ textarea {
 /****************************************************************SIGN IN****************************************************************/
 
 .fl-signin h1 {
-  color: #05dbf2;
+  color: #1693ab;
 }
 
 .fl-signin-card {

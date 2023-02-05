@@ -8,8 +8,9 @@ const Contact = () => {
       <div className="container-fluid">
         <BannerImg title="CONTACT US" />
         {/* <------CONTACT-ADDRESS-CARD-START------> */}
-        <div className="container">
-          <div className="row">
+        <div className="container py-5">
+          <h1 className="text-center mb-5">CONTACT</h1>
+          <div className="row d-flex justify-content-evenly align-items-center gap-3">
             <div className="card fl-contact-addresscard text-center">
               <div className="card-body">
                 <icon>
@@ -45,9 +46,9 @@ const Contact = () => {
         </div>
         {/* <------CONTACT-ADDRESS-CARD-START------> */}
 
-        <div className="container">
+        <div className="container py-5">
           <div className="row d-flex">
-            <div className="col-md-6 map">
+            <div className="col-md-6 map mb-3">
               <iframe
                 title="starflit"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.9842589636264!2d79.67165648485461!3d12.779533586893974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52dd3ed66d6515%3A0xf74226e526c3d9ee!2sSTARFLIT!5e0!3m2!1sen!2sin!4v1671085393368!5m2!1sen!2sin"

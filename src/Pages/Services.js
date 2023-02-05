@@ -9,7 +9,7 @@ const Services = () => {
         <h1 className="page-topic text-center mb-5">OUR SERVICES</h1>
         <div className="row d-flex justify-content-center gap-5">
           {Service.map((data) => (
-            <div class="card fl-service-card text-center p-2">
+            <div class="card fl-service-card text-center">
               <div class="card-body">
                 <img src={data.logo} alt="contact-img" className="mb-4"></img>
                 <h5>{data.name}</h5>

@@ -3,17 +3,14 @@ import logo from "../Images/fitnesslogo.png";
 
 const Menu = () => {
   return (
-    <nav className="navbar navbar-expand-lg fl-box-shadow">
-      <div className="container justify-content-around align-items-center p-3">
-        <ul className="logo">
-          <li>
-            <Link to="/">
-              <img src={logo} alt="logo" className="logo" />
-            </Link>
-          </li>
-        </ul>
-
-        <div className="row">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid menu ">
+        <div className="col-3 text-center">
+          <Link to="/" className="navbar-brand">
+            <img src={logo} alt="img" />
+          </Link>
+        </div>
+        <div className="col-9 text-end ps-5">
           <button
             className="navbar-toggler"
             type="button"
@@ -26,41 +23,48 @@ const Menu = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav mb-lg-0 text-center">
               <li className="nav-item">
-                <Link to="/">Home</Link>
+                <Link to="/" className="nav-link">
+                  Home
+                </Link>
               </li>
               <li className="nav-item">
-                <Link to="aboutus">About Us</Link>
+                <Link to="aboutus" className="nav-link">
+                  AboutUs
+                </Link>
               </li>
-
               <li className="nav-item">
-                <Link to="calculators">Calculators</Link>
+                <Link to="calculators" className="nav-link">
+                  Calculators
+                </Link>
               </li>
-
               <li className="nav-item">
-                <Link to="services">Services</Link>
+                <Link to="services" className="nav-link">
+                  Services
+                </Link>
               </li>
-
               <li className="nav-item">
-                <Link to="team">Team</Link>
+                <Link to="team" className="nav-link">
+                  Team
+                </Link>
               </li>
-              {/* <li className="nav-item">
-								<Link to="portfolio">Portfolio</Link>
-							</li> */}
               <li className="nav-item">
-                <Link to="contact">Contact</Link>
+                <Link to="contact" className="nav-link">
+                  Contact
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="signin" className="nav-link">
+                  SignIn
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="signup" className="nav-link">
+                  SignUp
+                </Link>
               </li>
             </ul>
-
-            {/* <div className="d-flex">
-							<li className="nav-item me-5">
-								<Link to="signin">SignIn</Link>
-							</li>
-							<li className="nav-item">
-								<Link to="signup">SignUp</Link>
-							</li>
-						</div> */}
           </div>
         </div>
       </div>

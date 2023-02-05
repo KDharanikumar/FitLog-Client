@@ -15,11 +15,11 @@ const SignIn = () => {
                   <label className="form-label">Password</label>
                   <input type="password" className="form-control mb-3" id="exampleInputPassword1" />
                 </form>
-                <div className="text-end mb-4">
+                {/* <div className="text-end mb-4">
                   <Link to="/forgotpassword" style={{ textDecoration: "none" }}>
                     <span className="text-black">Forgot Password?</span>
                   </Link>
-                </div>
+                </div> */}
                 <div>
                   <button type="submit" className="fl-button mb-4">
                     Sign In

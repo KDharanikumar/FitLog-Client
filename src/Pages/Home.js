@@ -8,12 +8,10 @@ const Home = () => {
       <div className="container-fluid home-banner d-flex justify-content-center align-items-center">
         <div className="row">
           <div className="fl-homebanner-text text-center">
-            <h3>YOUR HEALTH COACH</h3>
-            <h2>We Stay Fit With Our Best Coach</h2>
-            {/* <p>
-              Whether your aim is to loose weight, tone up, gain weight we can put together a gym programme or recommend
-              the right classes for you to attend in our studios.
-            </p> */}
+            <div>
+              <h3 className="mb-4">YOUR HEALTH COACH</h3>
+              <h2>We Stay Fit With Our Best Coach</h2>
+            </div>
           </div>
         </div>
       </div>
@@ -66,15 +64,17 @@ const Home = () => {
               <h6>
                 <u>BASIC</u>
               </h6>
-              <h6>
+              <h4>
                 $10<span>/Month</span>
-              </h6>
-              <ul>
+              </h4>
+              <hr></hr>
+              <ul className="p-0">
                 <li>Review Your Question</li>
+                <li>Work with Resources</li>
+                <li>Support & Mentoring</li>
                 <li>Review Your Question</li>
-                <li>Review Your Question</li>
-                <li>Review Your Question</li>
-                <li>Review Your Question</li>
+                <li>Work with Resources</li>
+                <li>Support & Mentoring</li>
               </ul>
             </div>
           </div>
@@ -82,17 +82,19 @@ const Home = () => {
           <div class="card fl-pricing-card text-center p-2">
             <div class="card-body">
               <h6>
-                <u>BASIC</u>
+                <u>ULTRA</u>
               </h6>
-              <h6>
-                $10<span>/Month</span>
-              </h6>
-              <ul>
+              <h4>
+                $25<span>/Month</span>
+              </h4>
+              <hr></hr>
+              <ul className="p-0">
                 <li>Review Your Question</li>
+                <li>Work with Resources</li>
+                <li>Support & Mentoring</li>
                 <li>Review Your Question</li>
-                <li>Review Your Question</li>
-                <li>Review Your Question</li>
-                <li>Review Your Question</li>
+                <li>Work with Resources</li>
+                <li>Support & Mentoring</li>
               </ul>
             </div>
           </div>
@@ -100,19 +102,29 @@ const Home = () => {
           <div class="card fl-pricing-card text-center p-2">
             <div class="card-body">
               <h6>
-                <u>BASIC</u>
+                <u>PRO</u>
               </h6>
-              <h6>
-                $10<span>/Month</span>
-              </h6>
-              <ul>
+              <h4>
+                $50<span>/Month</span>
+              </h4>
+              <hr></hr>
+              <ul className="p-0">
                 <li>Review Your Question</li>
+                <li>Work with Resources</li>
+                <li>Support & Mentoring</li>
                 <li>Review Your Question</li>
-                <li>Review Your Question</li>
-                <li>Review Your Question</li>
-                <li>Review Your Question</li>
+                <li>Work with Resources</li>
+                <li>Support & Mentoring</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-fluid home-bottom-banner d-flex justify-content-center align-items-center mb-5">
+        <div className="row">
+          <div className="text text-center">
+            <h1>We Always Focus On Your Health</h1>
           </div>
         </div>
       </div>

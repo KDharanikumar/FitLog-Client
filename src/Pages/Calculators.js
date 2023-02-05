@@ -57,7 +57,7 @@ const CalculationPages = () => {
       <div>
         <BannerImg title="BMI CALCULATOR" />
       </div>
-      <h1 className="page-topic text-center my-5">CALCULATOR</h1>
+      <h1 className="page-topic text-center my-5">BMI CALCULATOR</h1>
       <div className="container fl-calculator my-5 p-5">
         <div className="row">
           <div className="col-md-4 text-center">
