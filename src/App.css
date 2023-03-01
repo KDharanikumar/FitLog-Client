@@ -1,427 +1,428 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-  list-style: none;
-  font-family: "Poppins";
+	list-style: none;
+	font-family: "Poppins";
 }
 
 a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 18px;
 }
 
 .container-fluid {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 h5 {
-  font-size: 20px;
-  font-weight: 700;
+	font-size: 20px;
+	font-weight: 700;
 }
 
 h1 {
-  color: #1693ab;
-  font-size: 38px;
-  font-weight: 800;
+	color: #1693ab;
+	font-size: 38px;
+	font-weight: 800;
 }
 
 /****************************************************************BUTTON****************************************************************/
 
 .fl-button {
-  background-color: #087d92;
-  color: #fff;
-  padding: 8px;
-  border: none;
-  text-align: center;
-  height: fit-content;
-  width: fit-content;
-  font-weight: 400;
+	background-color: #087d92;
+	color: #fff;
+	padding: 8px 15px;
+	border: none;
+	text-align: center;
+	height: fit-content;
+	width: fit-content;
+	font-weight: 400;
 }
 
 /****************************************************************BANNER****************************************************************/
 
 .bg-banner {
-  background-image: url("https://images.squarespace-cdn.com/content/v1/5844961c44024382e467cee4/1492632509702-RIXSQ91HLD8TCW94ABG7/mobile-fitness-bg.jpg");
-  height: 450px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+	background-image: url("https://images.squarespace-cdn.com/content/v1/5844961c44024382e467cee4/1492632509702-RIXSQ91HLD8TCW94ABG7/mobile-fitness-bg.jpg");
+	height: 450px;
+	max-width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
 }
 
 .banner-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 450px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 450px;
 }
 
 .home-banner {
-  background-image: url("https://images.pexels.com/photos/2247179/pexels-photo-2247179.jpeg?auto=compress&cs=tinysrgb&w=600");
-  height: 650px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  background-position: center center;
+	background-image: url("https://images.pexels.com/photos/2247179/pexels-photo-2247179.jpeg?auto=compress&cs=tinysrgb&w=600");
+	height: 650px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-position: center center;
 }
 
 .fl-homebanner-text {
-  width: 100%;
-  height: 650px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 1;
-  overflow: hidden;
+	width: 100%;
+	height: 650px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.6);
+	opacity: 1;
+	overflow: hidden;
 }
 
 .home-bottom-banner {
-  background-image: url("./Images/pic1-9.jpg");
-  height: 600px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  background-position: center center;
+	background-image: url("./Images/pic1-9.jpg");
+	height: 600px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-position: center center;
 }
 
 .home-bottom-banner h1 {
-  width: 100%;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 1;
-  overflow: hidden;
+	width: 100%;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.6);
+	opacity: 1;
+	overflow: hidden;
 }
 
 /*************************************************************MENU*************************************************************/
 
 .navbar-brand img {
-  height: 60px;
-  width: 100px;
-  object-fit: contain;
+	height: 60px;
+	width: 100px;
+	object-fit: contain;
 }
 
 .navbar-nav li {
-  margin-right: 20px;
-  font-size: 18px;
-  font-weight: 600;
+	margin-right: 20px;
+	font-size: 18px;
+	font-weight: 600;
 }
 
 .nav-item .nav-link {
-  color: #087d92;
+	color: #087d92;
 }
 
 /************************************************************HOME************************************************************/
 
 .fl-home .bg-banner {
-  height: 600px;
+	height: 600px;
 }
 
 .fl-homebanner-text h2 {
-  font-size: 52px;
-  font-weight: 800;
+	font-size: 52px;
+	font-weight: 800;
 }
 
 .fl-homebanner-text h3 {
-  /* color: #05dbf2; */
-  font-size: 32px;
-  font-weight: 700;
+	color: #05dbf2;
+	font-size: 32px;
+	font-weight: 700;
 }
 
 .fl-banner-title {
-  font-size: 2.5rem;
-  color: #fff;
-  font-weight: 700;
+	font-size: 2.5rem;
+	color: #fff;
+	font-weight: 700;
 }
 
 .client-say img {
-  height: 100px;
-  width: 100px;
+	height: 100px;
+	width: 100px;
 }
 
 .client-say h5 {
-  font-size: 20px;
-  font-weight: 700;
+	font-size: 20px;
+	font-weight: 700;
 }
 
 .client-say p {
-  font-size: 16px;
-  font-weight: 600;
+	font-size: 16px;
+	font-weight: 600;
 }
 
 .client-say {
-  width: 350px;
+	width: 350px;
 }
 
 /*************************************************************TESTIMONIAL*************************************************************/
 
 .fl-homebanner-text {
-  color: #fff;
+	color: #fff;
 }
 
 .fl-testmonial h1 {
-  font-size: 54px;
-  font-weight: 700;
+	font-size: 54px;
+	font-weight: 700;
 }
 
 .testmonial-img img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
 }
 
 /*************************************************************PRICING*************************************************************/
 
 .fl-pricing-card {
-  width: 330px;
-  text-align: center;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: #fff;
+	width: 330px;
+	text-align: center;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border: #fff;
 }
 
 .fl-pricing-card ul li {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .fl-pricing-card h6 {
-  color: #087d92;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 50px;
+	color: #087d92;
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 50px;
 }
 
 .fl-pricing-card h4 {
-  color: #0ef494;
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 40px;
+	color: #0ef494;
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 40px;
 }
 
 .fl-pricing-card h4 span {
-  color: #000000;
-  font-size: 20px;
+	color: #000000;
+	font-size: 20px;
 }
 
 /**************************************************************ABOUT US**************************************************************/
 
 .fl-about-content h6 {
-  color: #1693ab;
-  font-size: 28px;
-  font-weight: bold;
+	color: #1693ab;
+	font-size: 28px;
+	font-weight: bold;
 }
 .fl-about-content h2 {
-  font-weight: bolder;
-  font-size: 60px;
-  margin-bottom: 25px;
+	font-weight: bolder;
+	font-size: 60px;
+	margin-bottom: 25px;
 }
 .fl-about-content p {
-  text-align: justify;
+	text-align: justify;
 }
 
 .fl-aboutus-img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 2px 6px;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	box-shadow: 0px 2px 6px;
 }
 
 /**************************************************************SERVICES***************************************************************/
 
 .fl-service-card {
-  width: 240px;
-  height: 300px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: #fff;
+	width: 240px;
+	height: 300px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border: #fff;
 }
 
 .fl-service-card:hover {
-  color: #fff;
-  background-color: #05dbf2;
+	color: #fff;
+	background-color: #05dbf2;
 }
 
 .fl-service-card img {
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  background-color: #d5f4f9;
-  margin-bottom: 20px;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+	background-color: #d5f4f9;
+	margin-bottom: 20px;
 }
 
 /****************************************************************TEAM****************************************************************/
 
 .fl-team-card {
-  width: 250px;
-  height: 350px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: #fff;
+	width: 250px;
+	height: 320px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border: #fff;
 }
 
 .fl-team-card h5 {
-  color: #0faac7;
-  font-weight: bold;
+	color: #0faac7;
+	font-weight: bold;
 }
 
 .fl-team-card img {
-  height: 180px;
-  width: 180px;
-  border-radius: 50%;
-  object-fit: cover;
+	height: 150px;
+	width: 15 0px;
+	border-radius: 50%;
+	object-fit: cover;
 }
 
 .fl-team-card img:hover {
-  transform: scale3d(1.1, 1.1, 1);
-  transition: transform 1s ease-in-out;
+	transform: scale3d(1.1, 1.1, 1);
+	transition: transform 1s ease-in-out;
 }
 
 /************************************************************CALCULATOR***********************************************************/
 .fl-calculator {
-  padding-top: 50px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: #fff;
+	padding-top: 50px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border: #fff;
 }
 
 .fl-calculator .form-label {
-  font-size: 18px;
-  font-weight: 600;
+	font-size: 18px;
+	font-weight: 600;
 }
 
 .fl-calculator h3 {
-  font-size: 26px;
-  font-weight: 800;
-  color: #0faac7;
+	font-size: 26px;
+	font-weight: 800;
+	color: #0faac7;
 }
 
 .calculation-result h4 {
-  font-size: 46px;
-  font-weight: 800;
-  color: #0faac7;
+	font-size: 46px;
+	font-weight: 800;
+	color: #0faac7;
 }
 
 .calculation-result h5 {
-  font-size: 36px;
-  font-weight: 800;
-  color: #000000;
+	font-size: 36px;
+	font-weight: 800;
+	color: #000000;
 }
 
 .calculation-result img {
-  height: 250px;
-  width: 250px;
-  margin-bottom: 30px;
+	height: 250px;
+	width: 250px;
+	margin-bottom: 30px;
 }
 
 .calculation-result .bmi-msg {
-  font-size: 26px;
-  font-weight: 600;
-  color: #f90303;
+	font-size: 26px;
+	font-weight: 600;
+	color: #f90303;
 }
 
 /*************************************************************CONTACT*************************************************************/
 
 .fl-contact-addresscard {
-  height: 200px;
-  width: 300px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: #fff;
+	height: 200px;
+	width: 300px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border: #fff;
 }
 
 .fl-contact-addresscard icon {
-  color: #05dbf2;
-  font-size: 42px;
-  font-weight: 800;
+	color: #05dbf2;
+	font-size: 42px;
+	font-weight: 800;
 }
 
 .map iframe {
-  height: 100%;
-  width: 100%;
-  border: 2px solid black;
+	height: 100%;
+	width: 100%;
+	border: 2px solid black;
 }
 
 .fl-contact-form input,
 textarea {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 input {
-  height: 50px;
-  border: 1px solid #a8a3a3;
+	height: 50px;
+	border: 1px solid #a8a3a3;
 }
 
 textarea {
-  height: 150px;
-  border: 1px solid #a8a3a3;
+	height: 150px;
+	border: 1px solid #a8a3a3;
 }
 
 .form-control:focus {
-  border-color: #000000;
-  box-shadow: none;
+	border-color: #000000;
+	box-shadow: none;
 }
 
 /****************************************************************SIGN IN****************************************************************/
 
 .fl-signin h1 {
-  color: #1693ab;
+	color: #1693ab;
 }
 
 .fl-signin-card {
-  width: 400px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: #fff;
+	width: 400px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border: #fff;
 }
 
 /****************************************************************SIGN UP****************************************************************/
 
 .fl-signup h1 {
-  color: #1693ab;
+	color: #1693ab;
 }
 
 .fl-signup-card {
-  margin: auto;
-  width: 400px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: #fff;
+	width: 400px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border: #fff;
 }
 
 /*************************************************************FORGOT PASSWORD***********************************************************/
 
 .fl-forgotpassword h1 {
-  color: #1693ab;
+	color: #1693ab;
 }
 .fl-forgotpassword-card {
-  margin: auto;
-  width: 350px;
-  padding: 15px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: #fff;
+	margin: auto;
+	width: 350px;
+	padding: 15px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border: #fff;
 }
 
 /***************************************************************FOOTER***************************************************************/
 .footer {
-  background-color: #092328;
-  color: white;
-  padding: 15px;
-  bottom: 0;
+	background-color: #092328;
+	color: white;
+	padding: 15px;
+	bottom: 0;
+	position: fixed;
 }
 
-.fullscreen {
-  height: 100vh;
-  min-height: 100%;
-}
+/* .fullscreen {
+	height: 100vh;
+	min-height: 100%;
+} */
