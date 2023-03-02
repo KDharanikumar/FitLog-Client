@@ -3,17 +3,15 @@
 * {
 	list-style: none;
 	font-family: "Poppins";
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 a {
 	text-decoration: none;
 	font-weight: 600;
 	font-size: 18px;
-}
-
-.container-fluid {
-	margin: 0;
-	padding: 0;
 }
 
 h5 {
@@ -45,17 +43,10 @@ h1 {
 .bg-banner {
 	background-image: url("https://images.squarespace-cdn.com/content/v1/5844961c44024382e467cee4/1492632509702-RIXSQ91HLD8TCW94ABG7/mobile-fitness-bg.jpg");
 	height: 450px;
-	max-width: 100%;
+	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-}
-
-.banner-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 450px;
 }
 
 .home-banner {
@@ -419,10 +410,4 @@ textarea {
 	color: white;
 	padding: 15px;
 	bottom: 0;
-	position: fixed;
 }
-
-/* .fullscreen {
-	height: 100vh;
-	min-height: 100%;
-} */

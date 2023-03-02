@@ -1,11 +1,27 @@
+import emailjs from "@emailjs/browser";
+import React, { useRef } from "react";
 import { FaPhoneVolume } from "react-icons/fa";
 import { HiLocationMarker, HiOutlineMail } from "react-icons/hi";
 import BannerImg from "../Components/BannerImg";
 
 const Contact = () => {
+	const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs.sendForm("service_bpf8f45", "template_836w5hc", form.current, "9lNVEL7r7eS2ZiijU").then(
+			(result) => {
+				console.log(result.text);
+				e.target.reset();
+			},
+			(error) => {
+				console.log(error.text);
+			}
+		);
+	};
 	return (
 		<section>
-			<div className="container-fluid">
+			<div className="container-fluid p-0">
 				<BannerImg title="CONTACT US" />
 				{/* <------CONTACT-ADDRESS-CARD-START------> */}
 				<div className="container py-5">
@@ -46,7 +62,7 @@ const Contact = () => {
 				</div>
 				{/* <------CONTACT-ADDRESS-CARD-START------> */}
 
-				<div className="container py-5 mb-5">
+				<div className="container py-5">
 					<div className="row d-flex">
 						<div className="col-md-6 map p-3">
 							<iframe
@@ -61,13 +77,36 @@ const Contact = () => {
 							<h3 className="mb-3">
 								<u>Get in Touch</u>
 							</h3>
-							<form className="fl-contact-form">
-								<input type="Text" className="form-control mb-3" id="exampleInputText" placeholder="Name" />
+							<form ref={form} onSubmit={sendEmail} className="fl-contact-form">
+								<input
+									type="Text"
+									className="form-control mb-3"
+									id="exampleInputText"
+									placeholder="Name"
+									name="user_name"
+								/>
 								<div className="d-flex">
-									<input type="tel" className="form-control mb-3 me-5" id="Phone Number" placeholder="Phone Number" />
-									<input type="email" className="form-control mb-3" id="exampleInputEmail1" placeholder="E-Mail" />
+									<input
+										type="tel"
+										className="form-control mb-3 me-5"
+										id="Phone Number"
+										placeholder="Phone Number"
+										name="phone"
+									/>
+									<input
+										type="email"
+										className="form-control mb-3"
+										id="exampleInputEmail1"
+										placeholder="E-Mail"
+										name="user_email"
+									/>
 								</div>
-								<textarea className="form-control mb-4" id="floatingTextarea" placeholder="Message..."></textarea>
+								<textarea
+									className="form-control mb-4"
+									id="floatingTextarea"
+									placeholder="Message..."
+									name="message"
+								></textarea>
 								<button type="submit" className="fl-button">
 									Submit Now
 								</button>

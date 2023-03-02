@@ -8,7 +8,7 @@ const Aboutus = () => {
 			<div className="container fl-about-content">
 				<h1 className="page-topic text-center my-5">ABOUT US</h1>
 				<div className="row">
-					<div className="col-md-6 p-5">
+					<div className="col-md-6 p-3">
 						<h2>We Help To Get Fitness Goal</h2>
 						<p>
 							I appreciate your coaching center really good environment and excellent student training. You are
@@ -16,7 +16,7 @@ const Aboutus = () => {
 							coaching center really good environment and excellent student training.
 						</p>
 					</div>
-					<div className="col-md-6 fl-aboutus-img p-5 text-center">
+					<div className="col-md-6 fl-aboutus-img p-3 text-center">
 						<img src={About1} alt="contact-img"></img>
 					</div>
 				</div>
