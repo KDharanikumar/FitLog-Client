@@ -10,7 +10,7 @@ const Menu = () => {
 						<img src={logo} alt="img" />
 					</Link>
 				</div>
-				<div className="col-9 text-end ps-5">
+				<div className="col-9 menu-item text-end">
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -54,16 +54,16 @@ const Menu = () => {
 									Contact
 								</Link>
 							</li>
-							{/* <li className="nav-item">
-                <Link to="signin" className="nav-link">
-                  SignIn
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="signup" className="nav-link">
-                  SignUp
-                </Link>
-              </li> */}
+							<li className="nav-item">
+								<Link to="signin" className="nav-link">
+									SignIn
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link to="signup" className="nav-link">
+									SignUp
+								</Link>
+							</li>
 						</ul>
 					</div>
 				</div>

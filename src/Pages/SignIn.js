@@ -11,12 +11,7 @@ const SignIn = () => {
 							<div className="card-body">
 								<form className="fl-signin-form">
 									<input type="email" className="form-control mb-4" id="exampleInputEmail1" placeholder="E-Mail" />
-									<input
-										type="password"
-										className="form-control mb-4"
-										id="exampleInputPassword1"
-										placeholder="Password"
-									/>
+									<input type="password" className="form-control mb-4" id="exampleInputPassword1" placeholder="Password" />
 								</form>
 								{/* <div className="text-end mb-4">
                   <Link to="/forgotpassword" style={{ textDecoration: "none" }}>

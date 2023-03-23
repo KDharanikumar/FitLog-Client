@@ -120,7 +120,9 @@ h1 {
 .nav-item .nav-link {
 	color: #087d92;
 }
-
+.menu-item {
+	padding: 0px 0px 0px 150px;
+}
 /************************************************************HOME************************************************************/
 
 .fl-home .bg-banner {
@@ -369,12 +371,18 @@ textarea {
 
 /****************************************************************SIGN IN****************************************************************/
 
+.fl-signin {
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .fl-signin h1 {
 	color: #1693ab;
 }
 
 .fl-signin-card {
-	width: 400px;
+	width: 350px;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 	border: #fff;
 }
