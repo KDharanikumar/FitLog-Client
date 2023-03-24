@@ -1,39 +1,122 @@
-import { Link } from "react-router-dom";
+import axios from "axios";
+import { useFormik } from "formik";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
+	let navigate = useNavigate();
+	let formik = useFormik({
+		initialValues: {
+			name: "",
+			email: "",
+			password: "",
+			confirmpassword: "",
+		},
+		validate: (values) => {
+			const errors = {};
+			if (!values.name) {
+				errors.name = " Name is Required";
+			}
+			if (!values.email) {
+				errors.email = "Email is Required";
+			} else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+				errors.email = "Invalid emial address";
+			}
+			if (!values.password) {
+				errors.password = "password is Required";
+			}
+			if (!values.confirmpassword) {
+				errors.confirmpassword = "password is Required";
+			}
+			return errors;
+		},
+		onSubmit: async (values) => {
+			try {
+				const response = await axios.post("https://pizza-server-39ry.onrender.com/users/signup", { ...values });
+				if (response.data) {
+					localStorage.setItem("token", response.data);
+					Swal.fire({
+						title: "User Created Successfully",
+						icon: "success",
+						confirmButtonText: "okay",
+					});
+					navigate("/");
+				}
+			} catch (error) {
+				console.log(error);
+				Swal.fire({
+					title: "Already exist user or worng details please check",
+					icon: "error",
+					confirmButtonText: "okay",
+				});
+			}
+		},
+	});
 	return (
-		<section>
-			<div className="container fl-signup my-5">
+		<section className="fl-signup">
+			<div className="container px-0 py-5">
 				<div className="row">
-					<div className="col d-flex justify-content-center">
-						<div className="card fl-signup-card text-center p-4 m-auto">
-							<h1 className="mb-3">Sign Up</h1>
+					<div className="col-md">
+						<div className="card fl-signup-card d-flex justify-content-center align-items-center mx-auto text-center">
 							<div className="card-body">
-								<form>
-									<input type="Text" className="form-control mb-3" id="exampleInputText" placeholder="Name" />
-									<input type="email" className="form-control mb-3" id="exampleInputEmail1" placeholder="E-Mail" />
-									<input
-										type="password"
-										className="form-control mb-3"
-										id="exampleInputPassword1"
-										placeholder="Password"
-									/>
-									<input
-										type="password"
-										className="form-control mb-4"
-										id="exampleInputPassword1"
-										placeholder="Confirm Password"
-									/>
+								<h1 className="my-3">Sign Up</h1>
+								<form onSubmit={formik.handleSubmit}>
+									<div className="my-4">
+										<span style={{ color: "red" }}>{formik.touched.name && formik.errors.name}</span>
+										<input
+											type="text"
+											className="form-control"
+											name="name"
+											placeholder="Name"
+											onChange={formik.handleChange}
+											value={formik.values.name}
+										/>
+										<br />
+										<span style={{ color: "red" }}>{formik.touched.email && formik.errors.email}</span>
+										<input
+											type="email"
+											className="form-control"
+											name="email"
+											placeholder="Email"
+											onChange={formik.handleChange}
+											value={formik.values.email}
+										/>
+										<br />
+										<span style={{ color: "red" }}>{formik.touched.password && formik.errors.password}</span>
+										<input
+											type="password"
+											className="form-control"
+											name="password"
+											placeholder="Password"
+											onChange={formik.handleChange}
+											value={formik.values.password}
+										/>
+										<br />
+										<span style={{ color: "red" }}>{formik.touched.confirmpassword && formik.errors.confirmpassword}</span>
+										<input
+											type="password"
+											className="form-control"
+											name="confirmpassword"
+											placeholder="Confirm Password"
+											onChange={formik.handleChange}
+											value={formik.values.confirmpassword}
+										/>
+										<br />
+									</div>
+
+									<div className="d-grid gap-4 mb-4">
+										<input type="submit" className="form-control" style={{ backgroundColor: "#1693ab", color: "#fff" }} value={"Create Account"} />
+									</div>
+
+									<div>
+										Already Have account?
+										<span className="text-primary fw-bold mx-2">
+											<Link to="/" style={{ color: "#119744", textDecoration: "none" }}>
+												Signin
+											</Link>
+										</span>
+									</div>
 								</form>
-								<button type="submit" className="fl-button mb-4">
-									Sign Up
-								</button>
-								<div>
-									Already have an account?
-									<Link to="/signin" style={{ textDecoration: "none", color: "#1693ab" }}>
-										<span className="fs-6"> SignIn</span>
-									</Link>
-								</div>
 							</div>
 						</div>
 					</div>
