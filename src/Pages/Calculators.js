@@ -64,26 +64,14 @@ const CalculationPages = () => {
 								<label for="weight" className="form-label">
 									WEIGHT
 								</label>
-								<input
-									type="number"
-									className="form-control"
-									value={weight}
-									onChange={(e) => setWeight(e.target.value)}
-									id="weight"
-								/>
+								<input type="number" className="form-control" value={weight} onChange={(e) => setWeight(e.target.value)} id="weight" />
 							</div>
 
 							<div className="mb-4">
 								<label for="height" className="form-label">
 									HEIGHT
 								</label>
-								<input
-									type="number"
-									className="form-control"
-									value={height}
-									onChange={(e) => setHeight(e.target.value)}
-									id="height"
-								/>
+								<input type="number" className="form-control" value={height} onChange={(e) => setHeight(e.target.value)} id="height" />
 							</div>
 
 							<button type="submit" className="fl-button mb-3 w-100">

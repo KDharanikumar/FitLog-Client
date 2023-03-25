@@ -372,7 +372,7 @@ textarea {
 /****************************************************************SIGN IN****************************************************************/
 
 .fl-signin {
-	height: 80vh;
+	height: 90vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -415,7 +415,7 @@ textarea {
 
 /***************************************************************FOOTER***************************************************************/
 .footer {
-	position: fixed;
+	/* position: fixed; */
 	background-color: #092328;
 	color: white;
 	padding: 15px;

@@ -34,11 +34,11 @@ const Menu = () => {
 									AboutUs
 								</Link>
 							</li>
-							<li className="nav-item">
+							{/* <li className="nav-item">
 								<Link to="calculators" className="nav-link">
 									Calculators
 								</Link>
-							</li>
+							</li> */}
 							<li className="nav-item">
 								<Link to="services" className="nav-link">
 									Services

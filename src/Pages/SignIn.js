@@ -31,8 +31,8 @@ const SignIn = () => {
 					localStorage.setItem("token", response.data);
 
 					const Token = localStorage.getItem("token");
-					console.log(Token);
-					Token ? navigate("calculators") : navigate("signin");
+					// console.log(Token);
+					Token ? navigate("/calculators") : navigate("signin");
 				}
 			} catch (error) {
 				console.log(error.response.data.msg);
